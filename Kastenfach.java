@@ -26,7 +26,8 @@ public class Kastenfach
     public Vokabel gibErsteVokabel()
     {
         // zu implementieren
-        return null;
+        vokabeln.toFirst();
+        return vokabeln.getContent();
     }
 
     /**
@@ -38,6 +39,15 @@ public class Kastenfach
     public void loescheVokabel(Vokabel vokabel)
     {
         // zu implementieren
+        vokabeln.toFirst();
+        if(vokabeln.hasAccess()){
+            if(vokabel == vokabeln.getContent()){
+                vokabeln.remove();
+            }
+            else{
+                vokabeln.next();
+            }
+        }    
     }
 
     /**
@@ -46,7 +56,16 @@ public class Kastenfach
     public boolean istLeer()
     {
         // zu implementieren
-        return false;
+        vokabeln.toFirst();
+        if(vokabeln.hasAccess()){
+            if(vokabeln.isEmpty()){
+                vokabeln.next();
+            }
+            else{
+                return false;
+            }
+        }  
+        return true;
     }
 
     /**
@@ -55,5 +74,6 @@ public class Kastenfach
     public void haengeVokabelAn(Vokabel vokabel)
     {
         // zu implementieren
+        vokabeln.append(vokabel);
     }
 }
