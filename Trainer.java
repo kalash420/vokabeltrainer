@@ -123,6 +123,16 @@ public class Trainer
      */
     public void druckeProzentzahlDerVokabelnProKasten()
     {
+        sprachen.toFirst();
+        int e = 0;
+        while(sprachen.hasAccess()){
+            for(int i = 0; i <= faecher.length; i++){
+                while(vokabeln.hasAccsess()){
+                    e= e+1;
+                }
+            }
+        }
+        
 
     }
 
@@ -132,9 +142,11 @@ public class Trainer
      */
     public int gibAnzahlVokabelnGesamt()
     {
+
+        
         return 0;
     }
-    
+
     /**
      * Gibt die gesuchte Vokabel zurück, um sie beispielsweise löschen zu können.
      * @param vok = Vokabel und sprache

@@ -12,7 +12,7 @@ public class Sprache
      * Bezeichner der Sprache: bspw. Englisch
      */
     private String bezeichnung;
-    
+   
     /**
      * Verweis auf den Kasten für die Vokabeln die zur Sprache gehören
      */
