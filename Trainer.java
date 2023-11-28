@@ -126,7 +126,10 @@ public class Trainer
         sprachen.toFirst();
         int e = 0;
         while(sprachen.hasAccess()){
-            for(int i = 0; i <= faecher.length; i++){
+            Kasten f = sprachen.getContent().gibKasten();
+            for(int i = 0; i <= 4; i++){
+                Kastenfach akt = f.gibKastenfach(i);
+                
                 while(vokabeln.hasAccsess()){
                     e= e+1;
                 }
